@@ -1,0 +1,13 @@
+{
+    "name": "chip8-emulator-monorepo",
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "./app",
+            "./wasm/pkg"
+        ]
+    },
+    "scripts": {
+        "wasm:dev": "cd wasm && cargo watch -i .gitignore -i \"pkg/* /*\" -s wasm-pack build --target web"
+    }
+}
